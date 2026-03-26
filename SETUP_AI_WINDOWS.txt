@@ -1,0 +1,318 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║      SETUP ASISTENT AI - GHID DETALIAT PENTRU WINDOWS        ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+ORICE ÎNTREBĂRI? SUPLIMEAZA RECOMANDAȚI COMENZI PAS CU PAS.
+
+───────────────────────────────────────────────────────────────────
+
+📋 PREREQUISITE
+════════════════
+
+✓ Windows 10/11
+✓ Conexiune internet
+✓ Cont OpenAI cu API Key
+✓ Ceva timp: ~15 minute
+
+───────────────────────────────────────────────────────────────────
+
+PASUL 1: DESCARCĂ ȘI INSTALEAZĂ NODE.JS
+═════════════════════════════════════════
+
+1. Mergi pe: https://nodejs.org/
+
+2. Descarcă versiunea LTS (Recommended)
+   Ar trebui să fie undeva ca: v18.x.x LTS
+
+3. Rulează instalatorul .msi
+
+4. Follow wizard default (Next, Next, Install)
+
+5. Verifică că e instalat:
+   
+   Deschide PowerShell (Win+X → Windows PowerShell)
+   Tastă:
+   
+   node --version
+   npm --version
+   
+   Trebuie să arată versiuni (ex: v18.16.0, 9.6.7)
+
+───────────────────────────────────────────────────────────────────
+
+PASUL 2: OBȚINEȚI API KEY DE LA OPENAI
+═══════════════════════════════════════
+
+1. Deschide browser și mergi pe:
+   https://platform.openai.com/api-keys
+
+2. Conectează-te / Creează cont
+
+3. Apasă: "Create new secret key"
+
+4. Copie cheia (va arăta: sk-proj-ABC123XYZ...)
+
+5. PAZĂ! O vei folosi din nou.
+
+───────────────────────────────────────────────────────────────────
+
+PASUL 3: SETUP BACKEND
+══════════════════════
+
+1. Deschide PowerShell și mergi în folder:
+   
+   cd C:\Users\DAVIDSMEN\Desktop\sitebun1
+
+2. Instalează dependențe:
+   
+   npm install
+   
+   (Acceptă warning-uri, ar trebui să se termine cu "added X packages")
+
+3. Deschide .env.example cu Notepad/VSCode
+   
+   Conținut:
+   ────────────────────────────
+   OPENAI_API_KEY=your_openai_api_key_here
+   PORT=3000
+   NODE_ENV=development
+   ────────────────────────────
+
+4. Crează un NOU fișier (File → New) și salvează ca ".env"
+   
+   Copiază conținutul din .env.example
+
+5. Schimbă rândul 1:
+   
+   OPENAI_API_KEY=sk-proj-ABC123XYZ...
+   
+   (Înlocuiește cu cheia ta din pasul 2!)
+
+6. Salvează fișierul în rădăcina proiectului
+
+───────────────────────────────────────────────────────────────────
+
+PASUL 4: TEST API ÎNAINTE DE PORNIRE
+═════════════════════════════════════
+
+1. În PowerShell (în folderul proiectului):
+   
+   npm test
+   
+   Dacă merge, trebuie să vezi:
+   "✅ SUCCES! OpenAI API funcționează!"
+   + Un răspuns de la AI
+
+2. Dacă merge → continue la pasul 5
+   Dacă nu merge → verify .env și cheia
+
+───────────────────────────────────────────────────────────────────
+
+PASUL 5: PORNIRE BACKEND
+═════════════════════════
+
+1. Deschide o noua fereastra PowerShell
+
+2. Mergi în folder:
+   
+   cd C:\Users\DAVIDSMEN\Desktop\sitebun1
+
+3. Pornire server:
+   
+   npm start
+   
+   Trebuie să APARĂ:
+   
+   ════════════════════════════════
+   🤖 AI Server funcționează pe http://localhost:3000
+   📝 Endpoint chat: POST http://localhost:3000/api/chat
+   ════════════════════════════════
+
+4. LASĂ FEREASTRA DESCHISĂ!
+   
+   (Dacă o închizi, serverul se oprește și AI nu merge)
+
+───────────────────────────────────────────────────────────────────
+
+PASUL 6: TEST FRONTEND
+══════════════════════
+
+1. Deschide folderul: C:\Users\DAVIDSMEN\Desktop\sitebun1
+
+2. Deschide index.html în browser (Chrome, Firefox, Edge)
+
+3. Mergi la: "Asistent AI"
+
+4. Ar trebui să vedere: "🤖 AI Real Conectat!"
+   
+   ✅ = Backend-ul funcționează!
+
+5. Pune o întrebare:
+   
+   "Ce este gândirea?"
+   
+   Ar trebui să primești răspuns de la OpenAI în 1-3 secunde! 🎉
+
+───────────────────────────────────────────────────────────────────
+
+✅ SEMNE DE SUCCES
+═══════════════════
+
+BINE 🟢:
+  ✅ "🤖 AI Real Conectat!" apare
+  ✅ Poți pune întrebări
+  ✅ Ai răspunsuri în 1-3 secunde
+  ✅ AI refuză întrebări din alte domenii
+
+RĂU 🔴:
+  ❌ "Backend nu e pornit" → npm start în PowerShell
+  ❌ "API Key invalid" → Verifică .env
+  ❌ Nimic nu se întâmplă → Check console (F12)
+
+───────────────────────────────────────────────────────────────────
+
+🆘 PROBLEME ȘI SOLUȚII
+════════════════════════
+
+PROBLEMA 1: "npm: command not found"
+→ Node.js nu e în PATH
+→ SOLUȚIE: Restartează calculatorul după install Node.js
+
+PROBLEMA 2: "Cannot find module 'express'"
+→ npm install nu a rulat
+→ SOLUȚIE: Rulează: npm install
+
+PROBLEMA 3: Port 3000 e deja ocupat
+→ Alt program folosește portul
+→ SOLUȚIE: Schimbă PORT în .env (3001 de ex.)
+→ SOLUȚIE ALT: PowerShell → taskkill /IM node.exe
+
+PROBLEMA 4: "OPENAI_API_KEY is not defined"
+→ .env nu e setat corect
+→ SOLUȚIE: Creează .env (NU .env.example!)
+→ SOLUȚIE: Verifică că .env e în rădăcina proiectului
+
+PROBLEMA 5: API Key "401 Unauthorized"
+→ Cheia e invalidă/expirată
+→ SOLUȚIE: Generează o nouă cheie pe platform.openai.com
+
+PROBLEMA 6: "Frontend nu se conectează la server"
+→ Serverul nu rulează
+→ SOLUȚIE: Confirmă că npm start lucra și portul e corect
+
+───────────────────────────────────────────────────────────────────
+
+💬 TESTE RAPIDE
+═════════════════
+
+După ce totul merge, încearcă:
+
+1. "Ce este gândirea?" 
+   → Ar trebui să primești o definiție
+
+2. "Explicație despre analiza și sinteza"
+   → Ar trebui să explice procesele
+
+3. "Care sunt componentele inteligenței?"
+   → Ar trebui o listă de componente
+
+4. "Unde locuiești?" 
+   → AI-ul va refuza (e despre materie!)
+
+5. "Fă o pastă"
+   → AI-ul va refuza (invalid domain)
+
+───────────────────────────────────────────────────────────────────
+
+⚠️ IMPORTANT
+═════════════
+
+1. LASĂ npm start DESCHIS
+   - Dacă-l închizi, serverul se oprește
+   - AI-ul nu mai merge
+   
+2. .env E PRIVAT
+   - Nu-l posta pe GitHub/internet
+   - Conține cheia secretă
+   
+3. OPENAI COSTS MONEY
+   - Fiecare întrebare = ~0.001-0.01$
+   - Seteaza un usage limit pe platform.openai.com
+   
+4. INTERNET E NECESAR
+   - Frontend → Backend → OpenAI
+   - Fără internet, nu merge
+
+───────────────────────────────────────────────────────────────────
+
+📞 RAPID COMMANDS
+═══════════════════
+
+Instalare:
+  npm install
+
+Test:
+  npm test
+
+Pornire:
+  npm start
+
+Versiuni:
+  node --version
+  npm --version
+
+───────────────────────────────────────────────────────────────────
+
+🎯 WORKFLOW ZILNIC
+═════════════════════
+
+1. Deschide PowerShell
+2. Mergi în folder: cd C:\...\sitebun1
+3. Pornire backend: npm start
+4. Lasă PowerShell deschis
+5. Deschide index.html în browser
+6. Mergi la Asistent AI
+7. Chat cu AI! 🤖
+
+───────────────────────────────────────────────────────────────────
+
+✨ BONUS: MOD DEVELOPMENT
+═══════════════════════════
+
+Pentru development cu auto-reload:
+
+1. Instalează nodemon:
+   npm install --save-dev nodemon
+
+2. Pornire în dev mode:
+   npm run dev
+   
+   (Auto-reloads la modificări ale server.js)
+
+───────────────────────────────────────────────────────────────────
+
+✅ CHECKLIST FINAL
+═══════════════════
+
+[  ] Node.js instalat (verificat cu node --version)
+[  ] npm install rulat (fără erori)
+[  ] OpenAI API Key obținut
+[  ] .env creat și completat
+[  ] npm test a trecut
+[  ] npm start funcționează în PowerShell
+[  ] Frontend se conectează ("AI Real Conectat")
+[  ] Poți pune întrebări și ai răspunsuri
+
+DACĂ TOTUL E ✅ → READY! 🚀
+
+───────────────────────────────────────────────────────────────────
+
+🎉 GATA!
+
+Ai un AI real în site! Bravo! 🤖
+
+═══════════════════════════════════════════════════════════════════
+
+Next: npm start (și lasă fereastra deschisă!)

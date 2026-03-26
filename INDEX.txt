@@ -1,0 +1,268 @@
+INDEX - GÂNDIREA ȘI INTELIGENȚA
+════════════════════════════════
+
+🚀 QUICK START
+══════════════
+
+1. Deschide: index.html în browser
+2. Apasă: "Începe lecțiile"
+3. Citește, Înveți, Testează-ți!
+
+───────────────────────────────────────────────────────────────
+
+📚 LECȚII DISPONIBILE
+════════════════════
+
+Lecția 1️⃣ - Introducere în Gândire
+Adresa: pages/lectie1.html
+Durata: ~15 min
+Conținut: Definiții, caracteristici, relație cu alte procese
+
+Lecția 2️⃣ - Procesele Gândirii  
+Adresa: pages/lectie2.html
+Durata: ~20 min
+Conținut: Analiza, Sinteza, Abstractizarea, Generalizarea
+
+Lecția 3️⃣ - Formele Logice ale Gândirii
+Adresa: pages/lectie3.html
+Durata: ~20 min
+Conținut: Conceptul, Judecata, Raționamentul
+
+Lecția 4️⃣ - Natura Psihologică a Inteligenței
+Adresa: pages/lectie4.html
+Durata: ~20 min
+Conținut: Componente, Modelul Triarhic, Inteligenţe multiple
+
+Lecția 5️⃣ - Problematica Măsurării Inteligenței
+Adresa: pages/lectie5.html
+Durata: ~20 min
+Conținut: IQ, Teste, Limitări, Implicații etice
+
+───────────────────────────────────────────────────────────────
+
+🎯 ACTIVITĂȚI INTERACTIVE
+═════════════════════════
+
+🎮 Quiz - Evaluare Cunoștințe
+Adresa: pages/quizz.html
+Tip: 10 întrebări cu feedback
+Timp: ~15 min
+Subiect: Toată materia cursului
+
+💬 Asistent AI - Răspunde la Întrebări
+Adresa: pages/asistent.html
+Tip: Chat interactiv
+Disponibilitate: Oricând
+Sugestii rapide: 6 subiecte principale
+
+───────────────────────────────────────────────────────────────
+
+📖 GHIDURI ȘI REFERINȚE
+═══════════════════════
+
+📄 README.txt
+Descriere: Prezentare generală a cursului
+Utilitate: START AICI!
+Conținut: Structură, cerințe, sfaturi
+
+📄 GHID_UTILIZARE.txt  
+Descriere: Flux de studiu recomandat
+Utilitate: Planificare studiu
+Conținut: Plan pe zile, sfaturi, evaluare
+
+📄 EXERCITII_PRACTICE.txt
+Descriere: Exerciții cu răspunsuri
+Utilitate: Consolidare cunoștințe
+Conținut: 30+ exerciții, soluții
+
+📄 CHEAT_SHEET.txt (în resurse/)
+Descriere: Rezumat rapid al materiei
+Utilitate: Referință rapidă
+Conținut: Formule, definiții, 10 Q&A
+
+📄 README_CURS.txt (în resurse/)
+Descriere: Structura completă a cursului
+Utilitate: Prezentare detaliată
+Conținut: Capitole, sursele, metode
+
+───────────────────────────────────────────────────────────────
+
+📁 FIȘIERE RESURSE ORIGINALE
+═════════════════════════════
+
+recurse/GANDIREA.docx
+recurse/PROCESELE GÂNDIRII.docx
+recurse/Formele logice ale gândirii.docx
+recurse/Natura psihologica a inteligentei.docx
+recurse/Problema masurarii inteligentei.docx
+recurse/GRILE - lectia Gandirea 1.docx
+recurse/GRILE lectia GANDIREA 2.docx
+
+Utilizare: Pentru referință din exterior
+
+───────────────────────────────────────────────────────────────
+
+🎨 DESIGN ȘI STILURI
+════════════════════
+
+css/style.css
+Tip: Glass Morphism Modern
+Culori: Gradient albastru-mov
+Responsive: Desktop, Tablet, Smartphone
+Animații: Smooth transitions și hover effects
+
+───────────────────────────────────────────────────────────────
+
+💡 FLUXUL OPTIM DE ÎNVĂȚARE
+═════════════════════════════
+
+ZI 1:
+  ✓ Citești README.txt (5 min)
+  ✓ Deschizi index.html (vedere generală)
+  ✓ Citești Lecția 1 (15 min)
+  ✓ Citești Lecția 2 (20 min)
+
+ZI 2:
+  ✓ Revizuiți Lecția 1-2 (10 min)
+  ✓ Citești Lecția 3 (20 min)
+  ✓ Citești Lecția 4 (20 min)
+
+ZI 3:
+  ✓ Citești Lecția 5 (20 min)
+  ✓ Faci exerciții din EXERCITII_PRACTICE.txt (20 min)
+  ✓ Faci Quiz-ul (15 min)
+
+ZI 4:
+  ✓ Revizuiți puncte slabe
+  ✓ Reîncerci Quiz-ul
+  ✓ Ești gata pentru test!
+
+───────────────────────────────────────────────────────────────
+
+🔍 CUPRINS DETALIAT
+════════════════════
+
+LECȚIA 1 - INTRODUCERE ÎN GÂNDIRE
+├─ Ce este gândirea
+├─ Caracteristici principale
+├─ Diferența de alte procese
+├─ Rolul în cunoaștere
+└─ Poziție centrală
+
+LECȚIA 2 - PROCESELE GÂNDIRII
+├─ Analiza (Întreg→Părți)
+├─ Sinteza (Părți→Întreg)
+├─ Abstractizarea (Concret→Abstract)
+├─ Generalizarea (Particular→General)
+└─ Interacțiuni
+
+LECȚIA 3 - FORMELE LOGICE
+├─ Conceptul (Intensiune+Extensiune)
+├─ Judecata (5 tipuri)
+├─ Raționamentul Deductiv
+├─ Raționamentul Inductiv
+└─ Raționamentul Analogic
+
+LECȚIA 4 - INTELIGENȚA
+├─ Definiție și caracteristici
+├─ 4 Componente principale
+├─ Modelul Triarhic (Sternberg)
+├─ 8 Inteligenţe multiple (Gardner)
+├─ Factori influenți
+└─ Plasticitate cerebrală
+
+LECȚIA 5 - MĂSURAREA INTELIGENȚEI
+├─ Istoria (Binet, Terman, Spearman)
+├─ Formula IQ
+├─ Intervale și interpretare
+├─ Teste principale
+├─ Limitări și probleme
+└─ Perspective critice
+
+───────────────────────────────────────────────────────────────
+
+❓ Q&A RAPID
+═════════════
+
+P: Unde încep?
+R: index.html → "Începe lecțiile"
+
+P: Cât timp durează?
+R: ~100 minute total (~20 min/lecție)
+
+P: E offline?
+R: DA! Complet local
+
+P: Pot rescrie conținutul?
+R: DA! E HTML pur, poți edita
+
+P: E pe mobil?
+R: DA! Responsive design
+
+P: Am nevoie de conexiune?
+R: NU! Funcționează offline
+
+P: Unde e Quiz-ul?
+R: pages/quizz.html
+
+P: Unde e Asistentul?
+R: pages/asistent.html
+
+P: Ce fac dacă nu inteleg ceva?
+R: Ceri ajutor Asistentului AI
+
+───────────────────────────────────────────────────────────────
+
+🎓 COMPETENȚE DOBÂNDITE
+═════════════════════════
+
+După curs, vei fi capabil să:
+
+✓ Definiți gândirea și caracteristicile
+✓ Explicați procesele gândirii
+✓ Identificați formele logice
+✓ Înțelegeți natura inteligenței
+✓ Evaluați măsurarea inteligenței (IQ)
+✓ Aplicați concepte în situații reale
+✓ Argumentați puncte de vedere
+✓ Criticați limitările testelor IQ
+
+───────────────────────────────────────────────────────────────
+
+📊 STATISTICI
+════════════
+
+Total fișiere: 15+
+Total cuvinte: 15,000+
+Total tabele: 20+
+Total exemple: 100+
+Total exerciții: 30+
+Total întrebări: 10+
+Timp total: ~100 min
+Dificultate: Medie
+
+───────────────────────────────────────────────────────────────
+
+✨ AVANTAJE CURS
+════════════════
+
+✓ Design modern și atractiv
+✓ Conținut complet și detaliat
+✓ Exerciții practice
+✓ Quiz interactiv
+✓ Asistent AI
+✓ Responsive design
+✓ Offline access
+✓ Referințe rapide
+✓ Ghid complet
+
+───────────────────────────────────────────────────────────────
+
+🎉 ÊXITO NA APRENDIZAGEM!
+
+Deschide index.html și bucură-te!
+
+═══════════════════════════════════════════════════════════════
+
+Creat: Martie 2026
+Status: ✅ COMPLET

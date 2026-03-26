@@ -1,0 +1,137 @@
+GHID DE UTILIZARE CURS - GÂNDIREA ȘI INTELIGENȚA
+================================================
+
+INÍCIO: Deschideți index.html în browser
+
+STRUCTURA NAVIGĂRII:
+═════════════════════
+
+Homepage (index.html)
+    ├─→ Lecția 1: Introducere în Gândire
+    │   (pages/lectie1.html)
+    │
+    ├─→ Lecția 2: Procesele Gândirii
+    │   (pages/lectie2.html)
+    │
+    ├─→ Lecția 3: Formele Logice ale Gândirii
+    │   (pages/lectie3.html)
+    │
+    ├─→ Lecția 4: Natura Psihologică a Inteligenței
+    │   (pages/lectie4.html)
+    │
+    ├─→ Lecția 5: Problematica Măsurării Inteligenței
+    │   (pages/lectie5.html)
+    │
+    ├─→ Quiz Interactiv (10 întrebări)
+    │   (pages/quizz.html)
+    │
+    └─→ Asistent AI (Chat de întrebări)
+        (pages/asistent.html)
+
+FLUXUL RECOMANDAT DE STUDIU:
+═════════════════════════════
+
+ZIUA 1:
+□ Citiți Lecția 1 (Introducere în Gândire) - 15 min
+□ Citiți Lecția 2 (Procesele Gândirii) - 20 min
+□ Accesați Asistentul AI pentru clarificări - 10 min
+
+ZIUA 2:
+□ Citiți Lecția 3 (Formele Logice) - 20 min
+□ Citiți Lecția 4 (Natura Inteligenței) - 20 min
+□ Reluați notele principale din Cheat Sheet - 10 min
+
+ZIUA 3:
+□ Citiți Lecția 5 (Măsurarea Inteligenței) - 20 min
+□ Faceți Quiz-ul (10 întrebări) - 15 min
+□ Revizuiți răspunsurile greșite - 10 min
+
+ZIUA 4:
+□ Revizuire generală a tuturor lecțiilor - 30 min
+□ Faceți din nou Quiz-ul pentru consolidare - 15 min
+□ Pregătiți-vă pentru evaluare
+
+INSTRUMENTE DE STUDIU DISPONIBILE:
+═════════════════════════════════
+
+1. CHEAT_SHEET.txt
+   - Rezumat rapid al fiecărei lecții
+   - Definițiile cheie
+   - Formule importante
+   - Întrebări frecvente la teste
+
+2. README_CURS.txt
+   - Prezentare generală a cursului
+   - Structura și componente
+   - Resurse utilizate
+
+3. FIȘIERELE ORIGINALE (resurse/)
+   - GANDIREA.docx
+   - PROCESELE GÂNDIRII.docx
+   - Formele logice ale gândirii.docx
+   - Natura psihologica a inteligentei.docx
+   - Problema masurarii inteligentei.docx
+   - GRILE - lectia Gandirea 1-2.docx
+
+SFATURI PENTRU APRENDARE EFICIENTĂ:
+═══════════════════════════════════
+
+✓ Luați notițe pe măsură ce citiți lecții
+✓ Verificați exemplele practice în fiecare secțiune
+✓ Folosiți tabelele pentru a compara concepte
+✓ Discutați cu Asistentul AI dacă ceva nu e clar
+✓ Faceți Quiz-ul mai mult o dată
+✓ Consultați Cheat Sheet-ul înainte de teste
+✓ Grupați conceptele asemănătoare
+✓ Creaţi diagrame pentru relații complexe
+
+IDEI DE EXERCIȚII SUPLIMENTARE:
+════════════════════════════════
+
+1. Gândire: Găsiți exemple de analiza și sinteza în viața reală
+2. Procese: Explicați cum ați folosi abstractizarea într-o problemă
+3. Forme logice: Construiți silogisme proprii
+4. Inteligență: Identificați-vă punctele forte în inteligență
+5. IQ: Cercetați diferența dintre IQ și succes în viață
+
+EVALUARE:
+═════════
+
+Quiz: 10 întrebări despre toată materia
+- Verde: 80-100% - Excelent!
+- Galben: 60-79% - Bun, dar mai mult studiu
+- Roșu: <60% - Revizuiți materiale și reîncercați
+
+CONTACT/SUPORT:
+═══════════════
+
+Folosiți Asistentul AI (asistent.html) pentru:
+- Clarificări asupra conceptelor
+- Răspunsuri la întrebări specifice
+- Explicații suplimentare
+- Exemple practice
+
+DESCARCĂ/IMPRIMEAZĂ:
+════════════════════
+
+Pentru studiu offline:
+1. Salvați paginile HTML ca PDF
+2. Tipăriți Cheat Sheet-ul
+3. Descarcați fișierele docx originale
+
+VERSIUNEA MOBILĂ:
+═════════════════
+
+Designul responsive funcționează pe:
+- Calculatoare desktop
+- Tablete
+- Telefoane mobile
+
+Optimizat pentru orice dimensiune de ecran!
+
+─────────────────────────────────────────
+CREAT: Martie 2026
+CURS: Psihologie - Clasa X
+TEMA: Gândirea și Inteligența
+STATUS: ✅ COMPLET și GATA DE UTILIZARE
+─────────────────────────────────────────

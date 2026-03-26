@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Gândire și Inteligență | FixMind</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .quiz-container { 
+            max-width: 700px; 
+            margin: 2rem auto; 
+            padding: 2rem;
+        }
+        
+        .quiz-content {
+            margin: 2rem 0;
+        }
+
+        .question-box {
+            background: rgba(37, 117, 252, 0.05);
+            border-left: 4px solid #2575fc;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .question-text {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .option { 
+            display: block; 
+            width: 100%; 
+            padding: 1rem; 
+            background: rgba(255,255,255,0.05); 
+            border: 2px solid rgba(37, 117, 252, 0.5);
+            color: white; 
+            cursor: pointer; 
+            border-radius: 8px; 
+            text-align: left;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .option:hover { 
+            background: rgba(37, 117, 252, 0.2);
+            transform: translateX(5px);
+        }
+
+        .option:disabled {
+            cursor: not-allowed;
+        }
+
+        .option.correct { 
+            background: rgba(76, 175, 80, 0.3) !important;
+            border-color: #4caf50 !important;
+        }
+
+        .option.wrong { 
+            background: rgba(244, 67, 54, 0.3) !important;
+            border-color: #f44336 !important;
+        }
+
+        .feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .feedback.correct {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+
+        .feedback.wrong {
+            background: rgba(244, 67, 54, 0.2);
+            color: #f44336;
+        }
+
+        .next-btn {
+            background: rgba(37, 117, 252, 0.3);
+            border: 1px solid rgba(37, 117, 252, 0.5);
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            display: none;
+        }
+
+        .next-btn:hover {
+            background: rgba(37, 117, 252, 0.5);
+        }
+
+        .next-btn.show {
+            display: block;
+        }
+
+        .score-display {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            color: #2575fc;
+            font-weight: 700;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 1.5rem 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2575fc, #6a11cb);
+            transition: width 0.3s ease;
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .quiz-header h1 {
+            margin: 0;
+            color: #2575fc;
+        }
+
+        .quiz-header .question-number {
+            background: rgba(37, 117, 252, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .results-screen {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .results-screen.show {
+            display: block;
+        }
+
+        .final-score {
+            font-size: 3rem;
+            color: #2575fc;
+            margin: 1rem 0;
+            font-weight: 700;
+        }
+
+        .score-message {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .results-btn {
+            background: rgba(37, 117, 252, 0.3);
+            border: 1px solid rgba(37, 117, 252, 0.5);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .results-btn:hover {
+            background: rgba(37, 117, 252, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-blobs"></div>
+    
+    <nav class="glass-nav">
+        <div class="logo">Fix<span>Mind</span></div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Acasă</a></li>
+            <li><a href="lectie1.html">Lecții</a></li>
+            <li><a href="quizz.html" class="active">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="glass-card quiz-container">
+            <div class="quiz-header">
+                <h1>🎯 Quiz - Gândire și Inteligență</h1>
+                <span class="question-number" id="question-counter">1/10</span>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 10%;"></div>
+            </div>
+
+            <div class="quiz-content" id="quiz-content">
+                <!-- Intrebari vor fi populate de JavaScript -->
+            </div>
+
+            <div class="results-screen" id="results-screen">
+                <h2>🏆 Rezultate Quiz</h2>
+                <div class="final-score" id="final-score">0/10</div>
+                <div class="score-message" id="score-message">Felicitări!</div>
+                <div style="margin-top: 2rem;">
+                    <a href="quizz.html" class="results-btn" onclick="location.reload()">Reîncarcă Quiz</a>
+                    <a href="../index.html" class="results-btn">Înapoi la Acasă</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const quizData = [
+            {
+                question: "Ce este gândirea?",
+                options: [
+                    "O formă de vedere directă a realității",
+                    "O formă superioară de reflectare a lumii în conștiință",
+                    "Un proces instinctiv necontrolat",
+                    "Echivalentul memoriei"
+                ],
+                correct: 1,
+                explanation: "Gândirea este o formă superioară de reflectare a lumii în conștiință, depășind percepția și reprezentarea directă."
+            },
+            {
+                question: "Care dintre aceste este o caracteristică a gândirii?",
+                options: [
+                    "Directitatea",
+                    "Particularitatea",
+                    "Generalitatea",
+                    "Instinctivitatea"
+                ],
+                correct: 2,
+                explanation: "Gândirea are caracter general - se ocupă cu clase de obiecte, nu cu cazuri particulare."
+            },
+            {
+                question: "Analiza este procesul de:",
+                options: [
+                    "Reunire a elementelor în întreg",
+                    "Descompunere a unui întreg în componente",
+                    "Extragere a esențialului",
+                    "Generalizare a cazurilor particulare"
+                ],
+                correct: 1,
+                explanation: "Analiza este procesul de descompunere mentală a unui întreg în componentele sale."
+            },
+            {
+                question: "Care este opusul sintezei?",
+                options: [
+                    "Generalizarea",
+                    "Abstractizarea",
+                    "Analiza",
+                    "Raționamentul"
+                ],
+                correct: 2,
+                explanation: "Sinteza este reunirea elementelor, iar analiza este descompunerea - sunt procese opuse."
+            },
+            {
+                question: "Conceptul este forma logică care reflectă:",
+                options: [
+                    "Imagini mentale ale obiectelor",
+                    "Trăsăturile esențiale și generale ale obiectelor",
+                    "Relații between judecăți",
+                    "Memorii personale"
+                ],
+                correct: 1,
+                explanation: "Conceptul reflectă trăsăturile esențiale și generale, nu cazuri particulare."
+            },
+            {
+                question: "Un silogism categoric este un exemplu de:",
+                options: [
+                    "Judecată simplă",
+                    "Raționament deductiv",
+                    "Abstracție",
+                    "Concept"
+                ],
+                correct: 1,
+                explanation: "Silogismul categoric este o formă de raționament deductiv unde concluzia decurge din premise."
+            },
+            {
+                question: "Raționamentul inductiv merge de la:",
+                options: [
+                    "General la particular",
+                    "Particular la general",
+                    "Abstract la concret",
+                    "Simplu la complex"
+                ],
+                correct: 1,
+                explanation: "Raționamentul inductiv generalizează din cazuri particulare la concluzii generale."
+            },
+            {
+                question: "Care dintre acestea NU este componentă a inteligenței?",
+                options: [
+                    "Inteligența practică",
+                    "Inteligența emoțională",
+                    "Inteligența intuitivă",
+                    "Inteligența socială"
+                ],
+                correct: 2,
+                explanation: "Inteligența intuitivă nu este recunoscută ca componentă științifică. Celelalte sunt recunoscute de cercetători."
+            },
+            {
+                question: "Formula tradițională pentru IQ este:",
+                options: [
+                    "(VC × VCS) ÷ 100",
+                    "(VM ÷ VC) × 100",
+                    "(VC ÷ VM) × 100",
+                    "(VM + VC) × 100"
+                ],
+                correct: 1,
+                explanation: "IQ = (Vârsta Mentală ÷ Vârsta Cronologică) × 100"
+            },
+            {
+                question: "Ce interval IQ este considerat normal (mediu)?",
+                options: [
+                    "80-90",
+                    "100-120",
+                    "90-110",
+                    "110-130"
+                ],
+                correct: 2,
+                explanation: "Intervalul 90-110 este considerat media (normal), cuprinzând ~68% din populație."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+
+        function loadQuestion() {
+            const quiz = document.getElementById('quiz-content');
+            const question = quizData[currentQuestion];
+            
+            if (currentQuestion >= quizData.length) {
+                showResults();
+                return;
+            }
+
+            document.getElementById('question-counter').textContent = `${currentQuestion + 1}/${quizData.length}`;
+            document.getElementById('progress-fill').style.width = `${((currentQuestion + 1) / quizData.length) * 100}%`;
+
+            let html = `<div class="question-box">
+                <div class="question-text">Întrebarea ${currentQuestion + 1}: ${question.question}</div>
+                <div class="options">`;
+
+            question.options.forEach((option, index) => {
+                html += `<button class="option" onclick="selectOption(${index})">${option}</button>`;
+            });
+
+            html += `</div>
+                <div id="feedback" style="display: none;"></div>
+                <button class="next-btn" id="next-btn" onclick="nextQuestion()">Următoarea →</button>
+            </div>`;
+
+            quiz.innerHTML = html;
+            answered = false;
+        }
+
+        function selectOption(index) {
+            if (answered) return;
+
+            answered = true;
+            const question = quizData[currentQuestion];
+            const options = document.querySelectorAll('.option');
+            
+            options.forEach(o => o.disabled = true);
+
+            if (index === question.correct) {
+                options[index].classList.add('correct');
+                score++;
+                showFeedback(true, question.explanation);
+            } else {
+                options[index].classList.add('wrong');
+                options[question.correct].classList.add('correct');
+                showFeedback(false, question.explanation);
+            }
+
+            document.getElementById('next-btn').classList.add('show');
+        }
+
+        function showFeedback(isCorrect, explanation) {
+            const feedback = document.getElementById('feedback');
+            feedback.style.display = 'block';
+            feedback.className = `feedback ${isCorrect ? 'correct' : 'wrong'}`;
+            feedback.innerHTML = `<strong>${isCorrect ? '✓ Corect!' : '✗ Greșit!'}</strong><br>${explanation}`;
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            loadQuestion();
+        }
+
+        function showResults() {
+            document.getElementById('quiz-content').style.display = 'none';
+            const resultsScreen = document.getElementById('results-screen');
+            const percentage = (score / quizData.length) * 100;
+
+            document.getElementById('final-score').textContent = `${score}/${quizData.length}`;
+
+            let message = '';
+            if (percentage === 100) {
+                message = "🌟 Perfect! Ești un expert în acest subiect!";
+            } else if (percentage >= 80) {
+                message = "🎉 Bravo! Rezultat excelent!";
+            } else if (percentage >= 60) {
+                message = "👍 Bine! Cunoștințe solide.";
+            } else if (percentage >= 40) {
+                message = "📚 Bun început! Mai mult de studiat.";
+            } else {
+                message = "💪 Continuă să înveți! Poti o face mai bine!";
+            }
+
+            document.getElementById('score-message').textContent = message;
+            resultsScreen.classList.add('show');
+        }
+
+        // Load first question on page load
+        window.addEventListener('load', loadQuestion);
+    </script>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
+            
+            setTimeout(() => {
+                document.getElementById('question-area').style.display = 'none';
+                document.getElementById('score-area').style.display = 'block';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistent AI - Gândire și Inteligență | FixMind</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .assistant-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .chat-window { 
+            height: 500px;
+            overflow-y: auto; 
+            margin-bottom: 1.5rem; 
+            padding: 1.5rem; 
+            background: rgba(37, 117, 252, 0.05);
+            border: 1px solid rgba(37, 117, 252, 0.2);
+            border-radius: 8px;
+        }
+
+        .msg { 
+            margin-bottom: 1rem; 
+            padding: 1rem; 
+            border-radius: 12px; 
+            max-width: 85%;
+            word-wrap: break-word;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .msg.ai { 
+            background: rgba(37, 117, 252, 0.15);
+            border-left: 3px solid #2575fc;
+        }
+
+        .msg.user { 
+            background: rgba(76, 175, 80, 0.15);
+            border-right: 3px solid #4caf50;
+            margin-left: auto;
+            text-align: right;
+            margin-right: 0;
+        }
+
+        .input-group { 
+            display: flex; 
+            gap: 1rem;
+        }
+
+        .input-group input {
+            flex: 1;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(37, 117, 252, 0.3);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+
+        .input-group input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #2575fc;
+            background: rgba(37, 117, 252, 0.1);
+        }
+
+        .input-group button {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border: none;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .input-group button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+        }
+
+        .assistant-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .assistant-header h1 {
+            color: #2575fc;
+            margin-bottom: 0.5rem;
+        }
+
+        .suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+
+        .suggestion-btn {
+            background: rgba(37, 117, 252, 0.1);
+            border: 1px solid rgba(37, 117, 252, 0.3);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .suggestion-btn:hover {
+            background: rgba(37, 117, 252, 0.3);
+            border-color: #2575fc;
+        }
+
+        .typing-indicator {
+            display: flex;
+            gap: 4px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #2575fc;
+            animation: typing 1.4s infinite;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% { opacity: 0.5; }
+            30% { opacity: 1; }
+        }
+
+        /* Scrollbar personalizat pentru chat */
+        .chat-window::-webkit-scrollbar { width: 8px; }
+        .chat-window::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 12px; }
+        .chat-window::-webkit-scrollbar-thumb { background: rgba(37,117,252,0.5); border-radius: 12px; }
+        .chat-window::-webkit-scrollbar-thumb:hover { background: rgba(37,117,252,0.8); }
+
+        .chat-window { scrollbar-width: thin; scrollbar-color: rgba(37,117,252,0.5) rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body>
+    <div class="background-blobs"></div>
+    
+    <nav class="glass-nav">
+        <div class="logo">Fix<span>Mind</span></div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Acasă</a></li>
+            <li><a href="lectie1.html">Lecții</a></li>
+            <li><a href="asistent.html" class="active">Asistent AI</a></li>
+            <li><a href="quizz.html">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <main class="assistant-container">
+        <div class="glass-card">
+            <div class="assistant-header">
+                <h1>🤖 Asistent AI - Psihologie</h1>
+                <p>Pune-mi întrebări despre gândire și inteligență</p>
+            </div>
+
+            <div class="chat-window" id="chat-window">
+                <div class="msg ai">
+                    Salut! 👋 Sunt asistentul tău virtual. Pot să te ajut cu orice întrebări despre gândire, procesele psihice și inteligență. Ce dorești să afli?
+                </div>
+                <div class="msg ai" style="margin-top: 1rem;">
+                    Iată câteva sugestii de subiecte pe care le pot discuta:
+                </div>
+            </div>
+
+            <div class="suggestions">
+                <button class="suggestion-btn" onclick="askQuestion('Ce este gândirea?')">Ce este gândirea?</button>
+                <button class="suggestion-btn" onclick="askQuestion('Care sunt procesele gândirii?')">Procesele gândirii</button>
+                <button class="suggestion-btn" onclick="askQuestion('Ce este inteligența?')">Natura inteligenței</button>
+                <button class="suggestion-btn" onclick="askQuestion('Cum se măsoară IQ?')">Măsurarea IQ</button>
+            </div>
+
+            <div class="input-group" style="margin-top: 1.5rem;">
+                <input type="text" id="user-input" placeholder="Scrie o întrebare..." onkeypress="if(event.key==='Enter') sendMessage()">
+                <button onclick="sendMessage()">Trimite</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Configurație backend
+        const BACKEND_URL = 'http://localhost:3000';
+
+        // Status indicator
+        let serverConnected = false;
+
+        // Verifică dacă serverul e pornit la încărcare
+        window.addEventListener('load', async () => {
+            try {
+                const response = await fetch(`${BACKEND_URL}/api/health`);
+                if (response.ok) {
+                    serverConnected = true;
+                    console.log('✅ Backend conectat');
+                    // Mesaj de bun venit cu serverul
+                    const chatWindow = document.getElementById('chat-window');
+                    const welcomeMsg = document.createElement('div');
+                    welcomeMsg.className = 'msg ai';
+                    welcomeMsg.innerHTML = '🤖 <strong>AI Real Conectat!</strong><br>Sunt conectat la OpenAI. Pune-mi o întrebare despre gândire și inteligență!';
+                    chatWindow.appendChild(welcomeMsg);
+                }
+            } catch (error) {
+                console.warn('⚠️ Backend nu e disponibil. Mod offline.');
+                serverConnected = false;
+            }
+        });
+
+        function askQuestion(question) {
+            document.getElementById('user-input').value = question;
+            sendMessage();
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('user-input');
+            const message = input.value.trim();
+            
+            if (!message) return;
+
+            const chatWindow = document.getElementById('chat-window');
+
+            // Afișează mesajul utilizatorului
+            const userMsg = document.createElement('div');
+            userMsg.className = 'msg user';
+            userMsg.textContent = message;
+            chatWindow.appendChild(userMsg);
+
+            // Afișează indicatorul de scriire
+            const typingMsg = document.createElement('div');
+            typingMsg.className = 'msg ai';
+            typingMsg.innerHTML = '<div class="typing-indicator"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>';
+            chatWindow.appendChild(typingMsg);
+
+            input.value = '';
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+
+            // Dacă serverul e conectat, folosește AI real
+            if (serverConnected) {
+                try {
+                    const response = await fetch(`${BACKEND_URL}/api/chat`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ message })
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        typingMsg.remove();
+                        
+                        const aiMsg = document.createElement('div');
+                        aiMsg.className = 'msg ai';
+                        aiMsg.innerHTML = formatMessage(data.response);
+                        chatWindow.appendChild(aiMsg);
+                    } else {
+                        throw new Error('Eroare API');
+                    }
+                } catch (error) {
+                    console.error('Eroare:', error);
+                    typingMsg.remove();
+                    
+                    const errorMsg = document.createElement('div');
+                    errorMsg.className = 'msg ai';
+                    errorMsg.textContent = '❌ Eroare la conectare la AI. Te rog, asigură-te că serverul e pornit.';
+                    chatWindow.appendChild(errorMsg);
+                }
+            } else {
+                // Mod offline - răspunsuri locale
+                setTimeout(() => {
+                    typingMsg.remove();
+                    const response = getOfflineResponse(message);
+                    const aiMsg = document.createElement('div');
+                    aiMsg.className = 'msg ai';
+                    aiMsg.textContent = response;
+                    chatWindow.appendChild(aiMsg);
+                }, 800);
+            }
+
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+
+        function formatMessage(text) {
+            if (!text) return '';
+            // escapare minimă pentru siguranță
+            let safe = text
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;');
+
+            // Bold **text**
+            safe = safe.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            // Italic *text*
+            safe = safe.replace(/\*(.*?)\*/g, '<em>$1</em>');
+            // Linie nouă -> br
+            safe = safe.replace(/\n/g, '<br>');
+            // Liste cu '-' (fiecare linie care începe cu '- ' devine <li>)
+            safe = safe.replace(/(?:<br>\s*-\s*(.*?))(?:<br>|$)/g, '<ul><li>$1</li></ul>');
+            // Dacă există mai multe elemente afișate într-un singur <ul>, consolidăm
+            safe = safe.replace(/<\/ul>(?:\s*<br>\s*)?<ul>/g, '');
+            // Indentare de paragraf (dacă utilizator pregătește linii cu tab sau 4 spații):
+            safe = safe.replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+            safe = safe.replace(/^ {2,}/gm, match => '&nbsp;'.repeat(match.length));
+
+            return safe;
+        }
+
+        // Răspunsuri offline (backup dacă serverul e offline)
+        function getOfflineResponse(userMessage) {
+            // În modul offline, nu mai refuzăm nicio întrebare.
+            // Răspundem generic și pentru orice subiect pentru a oferi libertate 100%.
+            return "⚠️ Serverul AI nu este conectat; sunt în modul offline și nu pot folosi OpenAI. Însă pot să-ți ofer un răspuns generic și să te ajut: '" +
+                   userMessage + "'. Îți recomand să rulezi backend-ul (npm start) pentru răspunsuri complete.";
+        }
+    </script>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

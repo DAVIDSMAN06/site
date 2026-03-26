@@ -1,0 +1,284 @@
+EXERCIȚII ȘI ACTIVITĂȚI PRACTICE
+═════════════════════════════════
+
+EXERCIȚII LA LECȚIA 1: INTRODUCERE ÎN GÂNDIRE
+═════════════════════════════════════════════
+
+Exercițiu 1: Identificarea Caracteristicilor
+─────────────────────────────────────────────
+Analizați aceste procese psihice și identificați care sunt GÂNDIRE și care nu:
+
+a) Văd un măr roșu pe masă
+   → Aceasta e PERCEPȚIE (directă)
+
+b) Mă gândesc cum ar fi să mănânc un măr
+   → Aceasta e REPREZENTARE (imagine)
+
+c) Constat că mărul e fruct și toate fructele sunt sănătoase
+   → Aceasta e GÂNDIRE ✓ (generalizare și raționament)
+
+d) Îmi amintesc gustul unui măr de acum o lună
+   → Aceasta e MEMORIE (reacualizare)
+
+Exercițiu 2: Caracter Abstrat vs Concret
+──────────────────────────────────────────
+Gândirea operează cu ABSTRACTE. Completați:
+
+Concret (obiect specific):    Abstract (concept general):
+- Pisica lui Ion              - Concept: "pisică"
+- Banca din fața casei        - Concept: "mobilă"
+- Cartea de română            - Concept: "carte"
+- Roșu (o floare roșie)       - Concept: "culoare"
+
+───────────────────────────────────────────────────────
+
+EXERCIȚII LA LECȚIA 2: PROCESELE GÂNDIRII
+═════════════════════════════════════════
+
+Exercițiu 1: ANALIZA
+────────────────────
+Luați un concept complex și descompuneți-l:
+
+"UNIVERSITATE" este format din:
+- Facultăți (biologie, filozofie, etc.)
+- Studenți și profesori
+- Cărți și laboratoare
+- Cursuri și examene
+- Norme și regulamente
+
+Exercițiu 2: SINTEZA
+────────────────────
+Luați aceste PĂRȚI și creați un ÎNTREG nou:
+
+PĂRȚI: Cărți + Birou + Profesor + Studenți + Tablă
+
+ÎNTREG CREAT: "Sala de clasă" (o sinteza)
+
+Exercițiu 3: ABSTRACTIZARE
+────────────────────────────
+Extrageți esențialul din aceste obiecte concrete:
+
+CONCRETE:         ESENȚĂ ABSTRACTĂ:
+Mașini            → Vehicule de transport
+Pisici, câini     → Animale domestice
+Iaurt, brânză     → Produse lactate
+100, 5, -3        → Numere (cantitate)
+
+Exercițiu 4: GENERALIZARE
+───────────────────────────
+Generalizați din CAZURI PARTICULARE:
+
+Observație 1: Pisica ronțăie și e agresivă
+Observație 2: Leul mănâncă carne și e agresiv
+Observație 3: Tigrul mănâncă carne și e agresiv
+
+CONCLUZIE GENERALIZATĂ: "Animalele carnivore sunt aggressive"
+
+───────────────────────────────────────────────────────
+
+EXERCIȚII LA LECȚIA 3: FORME LOGICE
+═════════════════════════════════════
+
+Exercițiu 1: CONCEPTE
+──────────────────────
+Definiți aceste concepte prin intensiune și extensiune:
+
+CONCEPT: "PĂTRAT"
+├─ INTENSIUNE: Figură geometrică cu 4 laturi egale și 4 unghiuri de 90°
+└─ EXTENSIUNE: Toate pătratele din univers (infinit)
+
+Exercițiu 2: JUDECĂȚI
+──────────────────────
+Identificați tipul de judecată:
+
+1. "Toți oamenii sunt muritori" 
+   → Judecată AFIRMATIVĂ și CATEGORICĂ
+
+2. "Nici un pix nu e animal"
+   → Judecată NEGATIVĂ și CATEGORICĂ
+
+3. "Dacă înveți, atunci vei trece examenul"
+   → Judecată IPOTETICĂ
+
+4. "Mă voi reproiza la matematică sau la limba română"
+   → Judecată DISJUNCTIVĂ
+
+Exercițiu 3: RAȚIONAMENT DEDUCTIV
+──────────────────────────────────
+Completați silogismul:
+
+Premisa majoră: "Toți pasarii au aripi"
+Premisa minoră: "Porumbelul este pasăre"
+Concluzie: "Deci, porumbelul are aripi" ✓
+
+Exercițiu 4: RAȚIONAMENT INDUCTIV
+───────────────────────────────────
+Observații particulare → Concluzie generală:
+
+Observație 1: Miele face miere din nectar
+Observație 2: Albina face miere din nectar
+Observație 3: Viespa face miere din nectar (parțial)
+
+CONCLUZIE: "Insectele fac produse din nectar"
+
+───────────────────────────────────────────────────────
+
+EXERCIȚII LA LECȚIA 4: NATURA INTELIGENȚEI
+═════════════════════════════════════════════
+
+Exercițiu 1: IDENTIFICARE TIPURI DE INTELIGENȚĂ
+────────────────────────────────────────────────
+
+Persoanele acestea utilizează ce tip de inteligență?
+
+a) Maria rezolvă ecuații complexe
+   → Inteligența LOGICO-MATEMATICĂ
+
+b) Ion se orientează perfect în oraș fără hartă
+   → Inteligența SPAȚIALĂ
+
+c) Ana compune cântece și muzică
+   → Inteligența MUZICALĂ
+
+d) Ionel înțelege ușor comportamentul oamenilor
+   → Inteligența INTERPERSONALĂ
+
+e) Bogdan știe exact cum se simte și ce gândește
+   → Inteligența INTRAPERSONALĂ
+
+Exercițiu 2: ANALIZA PROPRIEI INTELIGENȚE
+───────────────────────────────────────────
+Reflectați asupra propriilor puncte forte:
+
+Sunt mai bun la:
+□ Cuvinte și limbă
+□ Numere și logică
+□ Vizualizare și spațiu
+□ Muzică și ritm
+□ Mișcare și sport
+□ Înțelegerea oamenilor
+□ Autoanaliză și reflecție
+□ Natură și mediu
+
+Exercițiu 3: APLICARE MODELUL TRIARHIC
+────────────────────────────────────────
+
+Problema: "Cum reparezi o bicicletă ruptă?"
+
+1. Aspect ANALITIC: Analizez ce e stricat
+2. Aspect CREATIV: Gândesc soluții inovatoare
+3. Aspect PRACTIC: Aplic soluția în realitate
+
+───────────────────────────────────────────────────────
+
+EXERCIȚII LA LECȚIA 5: MĂSURAREA INTELIGENȚEI
+════════════════════════════════════════════════
+
+Exercițiu 1: CALCUL IQ
+──────────────────────
+
+Formula: IQ = (Vârsta Mentală ÷ Vârsta Cronologică) × 100
+
+a) Copil de 8 ani care performează ca un copil de 10 ani:
+   IQ = (10 ÷ 8) × 100 = 1.25 × 100 = 125 ✓ (Sus)
+
+b) Copil de 12 ani care performează ca un copil de 12 ani:
+   IQ = (12 ÷ 12) × 100 = 1 × 100 = 100 ✓ (Media)
+
+c) Adolescent de 15 ani care performează ca un copil de 12 ani:
+   IQ = (12 ÷ 15) × 100 = 0.8 × 100 = 80 ✓ (Sub medie)
+
+Exercițiu 2: INTERPRETARE IQ
+─────────────────────────────
+
+Plasați aceste scoruri în categoria corectă:
+
+135 → FOARTE SUS (Geniu)
+102 → MEDIA (Normal)
+75  → SLAB
+118 → DEASUPRA MEDIEI
+65  → FOARTE SLAB (Deficiență)
+92  → MEDIA (Normal)
+
+Exercițiu 3: REFLECȚIE ASUPRA IQ
+─────────────────────────────────
+
+Sunt de acord?
+□ IQ determină succesul în viață? 
+  ✗ NU! Și motivația, perseverența contează
+
+□ IQ se poate modifica?
+  ✓ DA! Prin învățare și practică
+
+□ IQ măsoară toată inteligența?
+  ✗ NU! Neglijează creativitate și emoție
+
+───────────────────────────────────────────────────────
+
+PROIECTE DE LUCRU INDEPENDENT
+═════════════════════════════
+
+Proiect 1: "GÂNDIREA MEA"
+──────────────────────────
+- Descrieți o problemă complexă pe care ati rezolvat
+- Identificați ce procese gândirii ați folosit
+- Explicați cum ati aplicat analiza, sinteza, abstractizarea
+
+Proiect 2: "ANALIZA UNUI SILOGISM"
+────────────────────────────────────
+- Găsiți sau creați 3 silogisme
+- Identificați premisele și concluziile
+- Analizați dacă sunt corecte logic
+
+Proiect 3: "STUDIU DE CAZ: MAȘINA vs INTELIGENȚĂ UMANĂ"
+──────────────────────────────────────────────────────
+- Comparați: calculele rapide ale mașinii vs creativitate umană
+- Ce poate face omul dar nu mașina?
+- Ce poate face mașina dar nu omul?
+
+Proiect 4: "JURNALUL INTELIGENȚEI"
+───────────────────────────────────
+- Pentru o săptămână, notați cum vă folosiți inteligența
+- Identificați situații unde ați fi putut fi mai inteligenți
+- Planuri de îmbunătățire
+
+───────────────────────────────────────────────────────
+
+ÎNTREBĂRI DE REFLECȚIE
+═════════════════════
+
+1. Ce crezi că e mai important: inteligența logică sau creativitatea?
+
+2. Poți să-ți ameliorezi inteligența? Cum?
+
+3. Care sunt limitările testelor IQ în măsurarea inteligenței?
+
+4. De ce e important să înțelegem diferența dintre gândire și alți procesi?
+
+5. Ce rol joacă emoțiile în deciziile inteligente?
+
+6. Este posibil să ai IQ scăzut dar să fi de fapt foarte inteligent?
+
+7. Care sunt consecințele stigmatizării "oamenilor cu IQ scăzut"?
+
+───────────────────────────────────────────────────────
+
+RĂSPUNSURI (Selectie)
+═════════════════════
+
+1. Ambele sunt importante! Creativitatea este o formă de inteligență
+   care nu e măsurată de teste tradiționale.
+
+3. IQ măsoară doar anumite abilități cognitive. Neglijează:
+   - Creativitate
+   - Inteligență emoțională  
+   - Cunoaștere practică
+   - Factori culturali
+
+6. DA! IQ nu măsoară toată inteligența. Exemple:
+   - Cărări practică vs cogniție
+   - Inteligență socială vs logică
+   - Experiență și înțelepciune vs teste formale
+
+───────────────────────────────────────────────────────
+SUCCES LA LUCRU! 📚

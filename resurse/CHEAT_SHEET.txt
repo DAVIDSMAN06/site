@@ -1,0 +1,228 @@
+CHEAT SHEET - GÂNDIREA ȘI INTELIGENȚA
+====================================
+
+📚 LECȚIA 1: INTRODUCERE ÎN GÂNDIRE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DEFINIȚIE:
+- Gândirea = forma superioară de reflectare a lumii în conștiință
+- Depășește percepția și reprezentarea directă
+
+CARACTERISTICI PRINCIPALE:
+1. Generalitate (clase de obiecte, nu particulare)
+2. Abstractitate (operează cu concepte, nu imagini concrete)
+3. Caracter activ (activitate intenționată și complexă)
+4. Determinare socială (se formează în context social)
+
+DIFERENȚĂ DE ALTE PROCESE:
+- Percepție: Directă vs Gândire: Indirectă
+- Reprezentare: Particulară vs Gândire: Generală
+- Memorie: Conservă vs Gândire: Transformă
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 LECȚIA 2: PROCESELE GÂNDIRII
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ANALIZA: Întreg → Părți
+   • Descompunere în componente
+   • Identificare de detalii
+   • Înțelegerea modului de funcționare
+
+2. SINTEZA: Părți → Întreg
+   • Reunire și combinare
+   • Creare de coerență
+   • Inovație și conexiuni noi
+
+3. ABSTRACTIZAREA: Concret → Abstract
+   • Extragere de esență
+   • Neglijare de detalii neimportante
+   • Formarea de concepte
+
+4. GENERALIZAREA: Particular → General
+   • Extensie cognitivă
+   • Descoperire de regularități
+   • Aplicare în noi situații
+
+RELAȚIE:
+- Analiza + Sinteza = pereche complementară
+- Abstractizare + Generalizare = formare concepte
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 LECȚIA 3: FORMELE LOGICE ALE GÂNDIRII
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IERARHIE:
+Nivel 1 → CONCEPTUL
+Nivel 2 → JUDECATA
+Nivel 3 → RAȚIONAMENTUL
+
+1. CONCEPTUL (Noțiunea)
+   ├─ Intensiune: trăsături esențiale
+   ├─ Extensiune: totalitate de obiecte
+   └─ Ex: "Mamifer" = propriětăți generale + toate mamiferele
+
+2. JUDECATA (Propoziție logică)
+   ├─ Subiectul (S): ceea ce se spune
+   ├─ Predicatul (P): ce se spune
+   ├─ Copula: relație (este/nu este)
+   ├─ Cuantificator: amploare (toți/unii/nici unu)
+   └─ Tipuri:
+       • Afirmative: "Oamenii sunt muritori"
+       • Negative: "Pixii nu sunt animale"
+       • Categorice: "Apa fierbe la 100°C"
+       • Ipotetice: "Dacă plouă, atunci..."
+       • Disjunctive: "Ploua sau brăzda"
+
+3. RAȚIONAMENTUL (Inferență)
+   ├─ DEDUCTIV: General → Particular
+   │  └─ "Toți oamenii sunt muritori"
+   │     "Socrate este om"
+   │     "Deci, Socrate este muritor"
+   │
+   ├─ INDUCTIV: Particular → General
+   │  └─ Aurul se dilată la cald
+   │     Fierul se dilată la cald
+   │     "Deci, toate metalele se dilatează"
+   │
+   └─ ANALOGIC: Transfer între cazuri similare
+      └─ Pământul are apă→viață
+         Marte are apă
+         "Deci, Marte probabil are viață"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 LECȚIA 4: NATURA PSIHOLOGICĂ A INTELIGENȚEI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DEFINIȚIE:
+Inteligența = Capacitate de a adapta comportament + rezolva probleme noi
+
+COMPONENTE:
+1. Inteligența Abstractă (Verbală)
+   - Concepte și noțiuni
+   - Raționament logic-matematic
+   - Limbaj
+
+2. Inteligența Practică (Non-verbală)
+   - Manipulare obiecte
+   - Relații spațiale
+   - Rezolvare probleme concrete
+
+3. Inteligența Socială (Interpersonală)
+   - Înțelegere comportament
+   - Empatie
+   - Comunicare
+
+4. Inteligența Emoțională (Intrapersonală)
+   - Cunoaștere de sine
+   - Control emoții
+   - Motivație
+
+MODELUL TRIARHIC (Sternberg):
+├─ ANALITIC: Analiză probleme, teste IQ
+├─ CREATIV: Soluții inovatoare, artă
+└─ PRACTIC: Aplicare în contexte reale
+
+FACTORI INFLUENȚI:
+├─ Biologici: genetică, creier, sănătate, vârstă
+├─ Psihosociali: educație, motivație, mediu, experiență
+└─ Culturali: acces educație, valori, condiții socioeconomice
+
+TEORIA INTELIGENȚELOR MULTIPLE (Gardner):
+1. Lingvistică (cuvinte)
+2. Logico-matematică (logică)
+3. Spațială (vizualizare)
+4. Muzicală (sunete)
+5. Kinestezică (mișcare corp)
+6. Interpersonală (oameni)
+7. Intrapersonală (sine)
+8. Naturalistică (natură)
+
+⭐ PLASTICITATE CEREBRALĂ:
+Inteligența NU E FIXĂ! Se dezvoltă prin învățare continuă și practică
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 LECȚIA 5: MĂSURAREA INTELIGENȚEI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ISTORIA:
+- 1905: Alfred Binet - Scara Binet-Simon
+- 1916: Lewis Terman - Concept IQ
+- 1904: Charles Spearman - Factorul "g"
+
+FORMULA IQ:
+IQ = (Vârsta Mentală ÷ Vârsta Cronologică) × 100
+
+INTERVALE IQ:
+┌─────────────┬─────────────────────┬─────────┐
+│ IQ Interval │ Clasificare         │ %       │
+├─────────────┼─────────────────────┼─────────┤
+│ >130        │ Foarte sus (Geniu)  │ <1%     │
+│ 120-130     │ Sus                 │ 2%      │
+│ 110-120     │ Deasupra mediei      │ 7%      │
+│ 90-110      │ MEDIA (Normal)       │ 68%     │
+│ 80-90       │ Sub medie            │ 7%      │
+│ 70-80       │ Slab                │ 2%      │
+│ <70         │ V. slab (Deficiență)│ <1%     │
+└─────────────┴─────────────────────┴─────────┘
+
+TESTE PRINCIPALE:
+1. Wechsler (WAIS/WISC) - Cel mai utilizat
+2. Stanford-Binet - Vârste 2-85 ani
+3. Raven - Matrici progresive (non-verbale)
+4. TONI - Non-verbal
+5. Woodcock-Johnson - Cognitivă și realizare
+
+PROBLEME ALE TESTELOR IQ:
+├─ Conceptuale:
+│  ├─ Definiție incompletă
+│  ├─ Neglijare creativitate
+│  ├─ Ignorare inteligență emoțională
+│  └─ Presupunere unidimensionalitate
+│
+├─ Metodologice:
+│  ├─ Bias cultural
+│  ├─ Avantaj pentru mediu stimulant
+│  ├─ Anxietate de test
+│  └─ Efect familiaritate
+│
+└─ Etice:
+   ├─ Etichete și stigmatizare
+   ├─ Discriminare
+   ├─ Influență auto-realizare
+   └─ Reflectare oportunități sociale
+
+⚠️ IMPORTANT:
+- IQ ≠ Valoare unei persoane
+- IQ ≠ Potențial real
+- Motivație, perseverență, creativitate contează mai mult
+- Mulți oameni cu IQ "mediu" au realizări extraordinare
+
+NILE DIRECȚII:
+- Evaluare dinamică (capacitate de a învăța)
+- Inteligenţe multiple
+- Testare adaptativă de computer
+- Evaluare holistică (creative, emoționale)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 DOMANDE FRECVENTE LA TESTE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Ce e gândirea? → Reflectare superioară a lumii în conștiință
+2. Ce caracteristică are gândirea? → Generalitate, abstractitate, activitate
+3. Cine a creat IQ? → Lewis Terman (1916)
+4. Care e media IQ? → 90-110
+5. Care e formula IQ? → (VM÷VC)×100
+6. Silogismul e? → Raționament deductiv
+7. Conceptul reflectă? → Trăsături generale esențiale
+8. Analiza e procesul de? → Descompunere în componente
+9. Inductia merge de la? → Particular la general
+10. Inteligența este fixă? → NU! Se poate dezvolta!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SUCCES LA LUCRĂRI ȘI EXAMENE! 📝
