@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixMind - Login & Register</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        
+        .auth-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 0 20px;
+        }
+
+        .auth-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .auth-card h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .toggle-form {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .toggle-form a {
+            color: #667eea;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .error-msg {
+            background: #fee;
+            color: #c33;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .success-msg {
+            background: #efe;
+            color: #3c3;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .materia-group {
+            display: none;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 20px 0;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- LOGIN FORM -->
+            <div id="login-form">
+                <h1>FixMind</h1>
+                <div class="error-msg" id="login-error"></div>
+                <div class="success-msg" id="login-success"></div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="login-email" placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Parolă</label>
+                    <input type="password" id="login-password" placeholder="Minim 6 caractere">
+                </div>
+
+                <button class="btn" onclick="handleLogin()">Autentificare</button>
+
+                <div class="toggle-form">
+                    Nu ai cont? <a onclick="toggleForms()">Înregistrează-te</a>
+                </div>
+            </div>
+
+            <!-- REGISTER FORM -->
+            <div id="register-form" style="display: none;">
+                <h1>Nou Cont</h1>
+                <div class="error-msg" id="register-error"></div>
+                <div class="success-msg" id="register-success"></div>
+
+                <div class="form-group">
+                    <label>Tip Cont</label>
+                    <select id="register-type" onchange="updateMateriaField()">
+                        <option value="">Alege tip...</option>
+                        <option value="elev">Elev</option>
+                        <option value="profesor">Profesor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Prenume</label>
+                    <input type="text" id="register-first-name" placeholder="Ion">
+                </div>
+
+                <div class="form-group">
+                    <label>Nume</label>
+                    <input type="text" id="register-last-name" placeholder="Popescu">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="register-email" placeholder="your@email.com">
+                </div>
+
+                <div class="form-group materia-group" id="materia-group">
+                    <label>Materia</label>
+                    <input type="text" id="register-materia" placeholder="ex: Psihologie" value="Psihologie">
+                </div>
+
+                <div class="form-group">
+                    <label>Parolă</label>
+                    <input type="password" id="register-password" placeholder="Minim 6 caractere">
+                </div>
+
+                <button class="btn" onclick="handleRegister()">Înregistrare</button>
+
+                <div class="toggle-form">
+                    Ai deja cont? <a onclick="toggleForms()">Autentificare</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:3000';
+
+        function toggleForms() {
+            document.getElementById('login-form').style.display = 
+                document.getElementById('login-form').style.display === 'none' ? 'block' : 'none';
+            document.getElementById('register-form').style.display = 
+                document.getElementById('register-form').style.display === 'none' ? 'block' : 'none';
+            clearMessages();
+        }
+
+        function updateMateriaField() {
+            const type = document.getElementById('register-type').value;
+            document.getElementById('materia-group').style.display = type === 'profesor' ? 'block' : 'none';
+        }
+
+        function showError(formType, message) {
+            const errorEl = document.getElementById(`${formType}-error`);
+            errorEl.textContent = message;
+            errorEl.style.display = 'block';
+            setTimeout(() => errorEl.style.display = 'none', 5000);
+        }
+
+        function showSuccess(formType, message) {
+            const successEl = document.getElementById(`${formType}-success`);
+            successEl.textContent = message;
+            successEl.style.display = 'block';
+            setTimeout(() => successEl.style.display = 'none', 5000);
+        }
+
+        function clearMessages() {
+            document.querySelectorAll('.error-msg, .success-msg').forEach(el => el.style.display = 'none');
+        }
+
+        async function handleLogin() {
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            if (!email || !password) {
+                showError('login', 'Email și parolă sunt obligatorii');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_URL}/api/auth/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+                    showSuccess('login', 'Login reușit! Redirecționare...');
+                    setTimeout(() => {
+                        window.location.href = data.user.type === 'profesor' ? 'pages/profesor-dashboard.html' : 'pages/elev-dashboard.html';
+                    }, 1500);
+                } else {
+                    showError('login', data.error || 'Eroare la login');
+                }
+            } catch (error) {
+                showError('login', 'Eroare de conexiune: ' + error.message);
+            }
+        }
+
+        async function handleRegister() {
+            const type = document.getElementById('register-type').value;
+            const first_name = document.getElementById('register-first-name').value;
+            const last_name = document.getElementById('register-last-name').value;
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+            const materia = document.getElementById('register-materia').value;
+
+            if (!type || !first_name || !last_name || !email || !password) {
+                showError('register', 'Toate câmpurile sunt obligatorii');
+                return;
+            }
+
+            try {
+                const body = { type, first_name, last_name, email, password };
+                if (type === 'profesor') body.materia = materia;
+
+                const response = await fetch(`${API_URL}/api/auth/register`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+                    showSuccess('register', 'Cont creat! Redirecționare...');
+                    setTimeout(() => {
+                        window.location.href = type === 'profesor' ? 'pages/profesor-dashboard.html' : 'pages/elev-dashboard.html';
+                    }, 1500);
+                } else {
+                    showError('register', data.error || 'Eroare la înregistrare');
+                }
+            } catch (error) {
+                showError('register', 'Eroare de conexiune: ' + error.message);
+            }
+        }
+
+        // Check if already logged in
+        window.addEventListener('load', () => {
+            if (localStorage.getItem('token')) {
+                const user = JSON.parse(localStorage.getItem('user'));
+                window.location.href = user.type === 'profesor' ? 'pages/profesor-dashboard.html' : 'pages/elev-dashboard.html';
+            }
+        });
+    </script>
+</body>
+</html>
